@@ -1,0 +1,24 @@
+{
+	"server" : {
+		"port" : 202,
+		"base_res_path" : "res",
+		"public_salt" : "a855931d31feb334981d61e37a46a032",
+		"bussiness_name" : "keke_ad"
+	},
+	"wechat" : {
+		"appid" : "wxfd64f1bf0bd3c9ba",
+		"secret" : "ba1bb53f04cba16e494cf05cc3d78add"
+	},
+	"mysql" : {
+		"host" : "115.28.241.66",
+		"user" : "root",
+		"password" : "lyoko123RAIN",
+		"database" : "keke_ad",
+		"port" : 8001
+	},
+	"bussiness" : {
+		"apps" : {
+			"main" : "e0c2e411b1b514960cc75a4aea0739fe"
+		}
+	}
+}
