@@ -28,7 +28,7 @@ async function auth(req, res, next){
 		req.response.code = 3002;
 		req.response.hash = "login";
 		req.response.error_message = "请登陆";
-		next();
+		res.send(JSON.stringify(req.response))
 		return ;
 	}
 	securityToken = securityToken.split("|");
@@ -36,7 +36,7 @@ async function auth(req, res, next){
 		req.response.code = 3002;
 		req.response.hash = "login";
 		req.response.error_message = "请登陆";
-		next();
+		res.send(JSON.stringify(req.response))
 		return ;
 	}
 
@@ -55,7 +55,7 @@ async function auth(req, res, next){
 		req.response.code = 3002;
 		req.response.hash = "login";
 		req.response.error_message = "请登陆";
-		next();
+		res.send(JSON.stringify(req.response))
 		return ;
 	}
 
@@ -69,7 +69,7 @@ async function auth(req, res, next){
 		req.response.code = 3002;
 		req.response.hash = "login";
 		req.response.error_message = "请重新登陆";
-		next();
+		res.send(JSON.stringify(req.response))
 		return ;
 	}
 	
