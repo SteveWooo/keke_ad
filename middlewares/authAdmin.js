@@ -73,6 +73,7 @@ async function auth(req, res, next){
 		return ;
 	}
 	
+	req.response.code = 2000;
 	req.response.source = {
 		type : 'admin',
 		nick_name : dbAdmins.rows[0].nick_name,
