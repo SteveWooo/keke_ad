@@ -37,7 +37,7 @@ Vue.component("login", {
 					that.utils.alert({
 						message : '登陆成功'
 					})
-					location.hash = 'ads';
+					location.hash = 'ad';
 					// location.reload();
 				}
 			})

@@ -62,7 +62,8 @@ module.exports = {
 			})
 
 			req.response.data = result;
-
+			req.response.code = 2000;
+			req.response.error_message = undefined;
 			next();
 		}catch(e){
 			req.response.code = 5000;
