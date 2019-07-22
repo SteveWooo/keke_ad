@@ -58,7 +58,7 @@ module.exports = {
 				swc.config.server.public_salt
 			].join("&")).digest("hex");
 
-			req.responseHeaders["Set-Cookie"] = "s=" + query.name + "|" + token + "|" + now + "; path=/";
+			req.responseHeaders["Set-Cookie"] = "adadmin=" + query.name + "|" + token + "|" + now + "; path=/";
 
 			next();
 		}catch(e){

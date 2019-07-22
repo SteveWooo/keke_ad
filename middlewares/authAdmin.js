@@ -23,7 +23,7 @@ async function auth(req, res, next){
 		query = req.body;
 	}
 
-	var securityToken = (await get_user_cookie(swc, req))['s'];
+	var securityToken = (await get_user_cookie(swc, req))['adadmin'];
 	if(!securityToken){
 		req.response.code = 3002;
 		req.response.hash = "login";
