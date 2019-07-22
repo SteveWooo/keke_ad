@@ -21,7 +21,7 @@ async function checkParam(swc, options){
 
 async function saveOriginImage(swc, options){
 	var imageFile = await swc.utils.image.saveImage(swc, {
-		filePath : `${path.resolve()}/public/res/adCover`,
+		filePath : `${__dirname}/../../../../public/res/adCover`,
 		image : options.image
 	});
 	return imageFile;

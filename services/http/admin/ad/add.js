@@ -5,7 +5,7 @@ const crypto = require("crypto");
 
 async function saveImage(swc, options){
 	var imageFile = await swc.utils.image.saveImage(swc, {
-		filePath : `${__dirname}/../../../public/res/adCover`,
+		filePath : `${__dirname}/../../../../public/res/adCover`,
 		image : options.image
 	});
 	return imageFile;
