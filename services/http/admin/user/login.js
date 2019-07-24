@@ -23,7 +23,7 @@ module.exports = {
 			next();
 			return ;
 		}
-		if(!req.session || !req.session.code || !query.code || req.session.code != query.code.toLowerCase()){
+		if(!req.session || req.session.code == undefined || req.session.code != query.code.toLowerCase()){
 			console.log(req.session.code);
 			req.response.code = 4005;
 			req.response.error_message = "验证码错误";
@@ -59,6 +59,9 @@ module.exports = {
 			].join("&")).digest("hex");
 
 			req.responseHeaders["Set-Cookie"] = "adadmin=" + query.name + "|" + token + "|" + now + "; path=/";
+
+			req.response.code = 2000;
+			req.response.error_message = '';
 
 			next();
 		}catch(e){
