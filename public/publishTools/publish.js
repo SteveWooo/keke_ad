@@ -5,7 +5,7 @@ const fs = require('fs');
 */
 
 var config = {
-	version : '1.0.0',
+	version : '1.0.1',
 	path : `${__dirname}/../admin`
 }
 
@@ -28,12 +28,12 @@ async function getFiles(){
 async function main(){
 	try{
 		var fileData = await getFiles();
-		var fileStat = fs.existsSync(`${config.path}/bundle-${config.version}.js`);
+		var fileStat = fs.existsSync(`${config.path}/out/bundle-${config.version}.js`);
 		if(fileStat == true){
 			console.log('目标版本已存在！请修改版本号');
 			return ;
 		}
-		fs.writeFileSync(`${config.path}/bundle-${config.version}.js`, fileData);
+		fs.writeFileSync(`${config.path}/out/bundle-${config.version}.js`, fileData);
 	}catch(e){
 		console.log(e);
 	}
